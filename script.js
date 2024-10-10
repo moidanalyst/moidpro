@@ -53,7 +53,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var formData = new FormData(this); // Capture form data
 
     // Send AJAX request
-    fetch('http://127.0.0.1:5000/submit_form', {
+    fetch('https://moid.up.railway.app/submit_form', {
         method: 'POST',
         body: formData
     })
