@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  }
+  
+  /* Parallax Section */
+  .parallax-section {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Initial opacity */
+    transition: opacity 0.1s ease; /* Smooth transition for opacity */
+  }
+  
+  #parallax-1 {
+    background-image: url('image1.jpg'); /* Replace with your own image */
+    opacity: 1;    
+  }
+  
+  #parallax-2 {
+    background-image: url('image2.jpg'); /* Replace with your own image */    
+  }
+
+  #parallax-3 {
+    background-image: url('image3.jpg'); /* Replace with your own image */
+  }
+
+  #parallax-4 {
+    background-image: url('image4.jpg'); /* Replace with your own image */
+  }
+  
+  #parallax-5 {
+    background-image: url('image5.jpg'); /* Replace with your own image */
+  }
+
+  #parallax-6 {
+    background-image: url('image6.jpg'); /* Replace with your own image */
+  }
+
+  /* Content inside parallax */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+  }
+  
+  /* Normal Section (Non-Parallax) */
+  .normal-section {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .normal-section h2 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+  }
+  
+  .normal-section p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .flip-card {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 200px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 0.5px solid black; /* Black border */
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #333; /* Dark background for the back */
+    color: white;
+    font-size: small;
+    padding: 5px;
+    transform: rotateY(180deg);
+}
+
+/* Carousel inner settings for smooth layout */
+.carousel-inner .row {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; /* Change control color */
+    color: black;
+}
+
+form {
+  max-width: 500px; /* Limit the form width */
+  margin: auto; /* Center the form */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea {
+  width: 100%; /* Make all fields take up 100% of the form width */
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box; /* Ensure padding and width work together */
+}
+
+input[type="submit"] {
+  background-color: #000000; /* Add a background color to the button */
+  color: white; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffffff; /* Button hover effect */
+  color: black;    
+}
+
+label {
+  font-size: 1.2em; /* Make labels larger */
+}
+
+#thankyou {
+  display: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;
+}
