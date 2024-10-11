@@ -70,3 +70,16 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .catch(error => console.error('Error:', error));
 });
+
+    // Check if the 'page_view' item exists in localStorage
+    if (localStorage.getItem('page_view')) {
+        // If it exists, increment the count
+        localStorage.setItem('page_view', Number(localStorage.getItem('page_view')) + 1);
+    } else {
+        // If it doesn't exist, initialize the count to 1
+        localStorage.setItem('page_view', 1);
+    }
+
+    // Display the visitor count on the webpage
+    console.log("This page has been viewed ", localStorage.getItem('page_view'), " times");
+
